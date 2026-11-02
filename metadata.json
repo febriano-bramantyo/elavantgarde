@@ -1,0 +1,6 @@
+{
+  "name": "EL AVANTGARDE | Modern Classic Residences Bintaro",
+  "description": "Timeless modern classic residences in Bintaro developed and managed by Avantgarde Jouzujuro — an architecture and interior design house devoted to livable luxury.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

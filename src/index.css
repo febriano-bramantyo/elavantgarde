@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(40 60% 98%);
+  --color-foreground: hsl(0 0% 7%);
+  --color-card: hsl(40 60% 98%);
+  --color-card-foreground: hsl(0 0% 7%);
+  --color-popover: hsl(40 60% 98%);
+  --color-popover-foreground: hsl(0 0% 7%);
+  --color-primary: hsl(0 0% 7%);
+  --color-primary-foreground: hsl(40 60% 98%);
+  --color-secondary: hsl(30 30% 94%);
+  --color-secondary-foreground: hsl(0 0% 7%);
+  --color-muted: hsl(30 30% 94%);
+  --color-muted-foreground: hsl(0 0% 40%);
+  --color-accent: hsl(39 47% 56%);
+  --color-accent-foreground: hsl(0 0% 7%);
+  --color-destructive: hsl(0 70% 45%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+  --color-border: hsl(30 20% 88%);
+  --color-input: hsl(30 20% 85%);
+  --color-ring: hsl(39 47% 56%);
+}
+
+:root {
+  --ivory: #FDFBF7;
+  --beige: #F4EFEA;
+  --beige-2: #E8DFD8;
+  --charcoal: #121212;
+  --charcoal-2: #1A1A1A;
+  --gold: #C5A059;
+  --gold-2: #B38F46;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--ivory);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--gold);
+  color: #fff;
+}
+
+.font-display {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+  font-weight: 600;
+}
+.eyebrow-dark {
+  color: var(--gold);
+}
+
+.gold-line {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 1s cubic-bezier(.2, .7, .2, 1), transform 1s cubic-bezier(.2, .7, .2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #121212;
+  transition: background-color .35s, transform .35s, box-shadow .35s;
+}
+.btn-gold:hover {
+  background: #d4b273;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(197, 160, 89, .35);
+}
+.btn-ghost-light {
+  border: 1px solid rgba(255, 255, 255, .45);
+  color: #fff;
+  transition: background-color .35s, color .35s;
+}
+.btn-ghost-light:hover {
+  background: #fff;
+  color: #121212;
+}
+.btn-dark {
+  background: #121212;
+  color: #FDFBF7;
+  transition: background-color .35s, transform .35s;
+}
+.btn-dark:hover {
+  background: #2a2a2a;
+  transform: translateY(-2px);
+}
+
+.card-soft {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .04);
+  transition: box-shadow .5s, transform .5s;
+}
+.card-soft:hover {
+  box-shadow: 0 24px 50px rgba(0, 0, 0, .09);
+  transform: translateY(-6px);
+}
+
+.img-zoom img {
+  transition: transform 1.4s cubic-bezier(.2, .7, .2, 1);
+}
+.img-zoom:hover img {
+  transform: scale(1.06);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(.8); opacity: .8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.hotspot-ring {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes slow-pan {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.slow-pan {
+  animation: slow-pan 30s ease-in-out infinite alternate;
+}
+
+@keyframes scroll-dot {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(18px); opacity: 0; }
+}
+.scroll-dot {
+  animation: scroll-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+.hero-in {
+  opacity: 0;
+  animation: hero-in 1.2s cubic-bezier(.2, .7, .2, 1) forwards;
+}
