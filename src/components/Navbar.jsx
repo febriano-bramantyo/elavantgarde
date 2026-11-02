@@ -48,7 +48,7 @@ export const Navbar = () => {
   return (
     <header data-testid="navbar" className={`fixed top-0 inset-x-0 z-50 transition-[background-color,box-shadow,padding] duration-500 ${solid ? "bg-[#FDFBF7]/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)] py-0.5" : "bg-transparent py-1"}`}>
       <div className="max-w-[1600px] mx-auto px-3 sm:px-4 lg:px-6 flex items-center justify-between gap-2 sm:gap-4">
-        <Link to="/" data-testid="nav-logo" className="flex items-center gap-2 sm:gap-3">
+        <Link to="/" data-testid="nav-logo" className="flex items-center gap-1 sm:gap-2">
           <img 
             src="/logo.png" 
             alt="EL AVANTGARDE Logo" 
@@ -57,7 +57,7 @@ export const Navbar = () => {
               e.target.style.display = 'none';
             }}
           />
-          <span className={`min-w-0 truncate font-display text-base sm:text-2xl tracking-[0.14em] sm:tracking-[0.28em] font-medium whitespace-nowrap ${solid ? "text-[#121212]" : "text-white"}`}>
+          <span className={`min-w-0 truncate font-display text-sm sm:text-xl md:text-2xl tracking-[0.1em] sm:tracking-[0.14em] md:tracking-[0.28em] font-medium whitespace-nowrap ${solid ? "text-[#121212]" : "text-white"}`}>
             EL AVANTGARDE
           </span>
         </Link>
