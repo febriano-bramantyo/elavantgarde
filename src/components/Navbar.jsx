@@ -49,12 +49,14 @@ export const Navbar = () => {
     <header data-testid="navbar" className={`fixed top-0 inset-x-0 z-50 transition-[background-color,box-shadow,padding] duration-500 ${solid ? "bg-[#FDFBF7]/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)] py-3" : "bg-transparent py-6"}`}>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-3 sm:gap-6">
         <Link to="/" data-testid="nav-logo" className="flex items-center gap-2 sm:gap-3">
-          <div className={`h-8 sm:h-10 w-8 sm:w-10 flex items-center justify-center rounded ${solid ? "bg-gradient-to-br from-[#D4AF37] to-[#B8941E]" : "bg-gradient-to-br from-[#F4D03F] to-[#C5A059]"}`}>
-            <svg viewBox="0 0 100 100" className="w-5 sm:w-6 h-5 sm:h-6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 10L90 90H10L50 10Z" fill="currentColor" className={solid ? "text-[#121212]" : "text-white"} />
-              <path d="M50 30L70 70H30L50 30Z" fill="none" stroke="currentColor" strokeWidth="3" className={solid ? "text-[#121212]" : "text-white"} />
-            </svg>
-          </div>
+          <img 
+            src="/logo.png" 
+            alt="EL AVANTGARDE Logo" 
+            className="h-8 sm:h-10 w-auto"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
           <span className={`min-w-0 truncate font-display text-base sm:text-2xl tracking-[0.14em] sm:tracking-[0.28em] font-medium whitespace-nowrap ${solid ? "text-[#121212]" : "text-white"}`}>
             EL AVANTGARDE
           </span>
