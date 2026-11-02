@@ -52,7 +52,7 @@ export const Navbar = () => {
           <img 
             src="/logo.png" 
             alt="EL AVANTGARDE Logo" 
-            className="h-10 sm:h-12 md:h-14 w-auto"
+            className="h-20 sm:h-24 md:h-28 w-auto"
             onError={(e) => {
               e.target.style.display = 'none';
             }}
