@@ -46,7 +46,7 @@ export const Navbar = () => {
   };
 
   return (
-    <header data-testid="navbar" className={`fixed top-0 inset-x-0 z-50 transition-[background-color,box-shadow,padding] duration-500 ${solid ? "bg-[#FDFBF7]/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)] py-1" : "bg-transparent py-2"}`}>
+    <header data-testid="navbar" className={`fixed top-0 inset-x-0 z-50 transition-[background-color,box-shadow,padding] duration-500 ${solid ? "bg-[#FDFBF7]/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)] py-0.5" : "bg-transparent py-1"}`}>
       <div className="max-w-[1600px] mx-auto px-1 sm:px-2 lg:px-4 flex items-center justify-between gap-3 sm:gap-6">
         <Link to="/" data-testid="nav-logo" className="flex items-center gap-2 sm:gap-3">
           <img 
