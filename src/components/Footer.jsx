@@ -12,7 +12,10 @@ export const Footer = () => {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <div className="grid md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
           <div className="md:col-span-5">
-            <p data-testid="footer-logo" className="font-display text-3xl md:text-4xl tracking-[0.28em]">EL AVANTGARDE</p>
+            <div className="flex flex-col items-start mb-4">
+              <img src="/logo.png" alt="EL AVANTGARDE Logo" className="h-16 md:h-20 w-auto mb-3" />
+              <p data-testid="footer-logo" className="font-display text-2xl md:text-4xl tracking-[0.2em] md:tracking-[0.28em] whitespace-nowrap">EL AVANTGARDE</p>
+            </div>
             <p className="mt-4 text-white/60 max-w-sm">{t("footer.tagline")}</p>
             
             <div className="mt-10 space-y-6">
