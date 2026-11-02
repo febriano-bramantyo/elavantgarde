@@ -2,7 +2,7 @@ export const SITE = {
   whatsappNumber: "6281228076685",
   whatsappDisplay: "+62 812-2807-6685",
   email: "jouzujuroavantgarde@gmail.com",
-  instagram: "avantgarde_jouzujuro",
+  instagram: "elavantgarde.design",
   tiktok: "avantgarde.property",
   office: "Marketing Gallery EL AVANTGARDE, Jl. Bintaro Utama (placeholder), Bintaro, Tangerang Selatan, Banten",
   officeCenter: "Jl. Perkici Raya Blok EB2 No.16 Jurang Mangu Timur, Pondok Aren, Tangerang Selatan 15222",
