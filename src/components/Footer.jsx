@@ -14,8 +14,18 @@ export const Footer = () => {
           <div className="md:col-span-5">
             <p data-testid="footer-logo" className="font-display text-3xl md:text-4xl tracking-[0.28em]">EL AVANTGARDE</p>
             <p className="mt-4 text-white/60 max-w-sm">{t("footer.tagline")}</p>
-            <p className="eyebrow eyebrow-dark mt-10">{t("footer.office")}</p>
-            <p data-testid="footer-address" className="mt-3 text-white/70 text-sm max-w-sm leading-relaxed">{SITE.office}</p>
+            
+            <div className="mt-10 space-y-6">
+              <div>
+                <p className="eyebrow eyebrow-dark">OFFICE CENTER</p>
+                <p data-testid="footer-office-center" className="mt-3 text-white/70 text-sm max-w-sm leading-relaxed">{SITE.officeCenter}</p>
+              </div>
+              
+              <div>
+                <p className="eyebrow eyebrow-dark">BRANCH OFFICE</p>
+                <p data-testid="footer-branch-office" className="mt-3 text-white/70 text-sm max-w-sm leading-relaxed">{SITE.branchOffice}</p>
+              </div>
+            </div>
           </div>
           <div className="md:col-span-3">
             <p className="eyebrow eyebrow-dark mb-5">{t("footer.explore")}</p>

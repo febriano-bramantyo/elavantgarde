@@ -5,6 +5,8 @@ export const SITE = {
   instagram: "avantgarde_jouzujuro",
   tiktok: "avantgarde.property",
   office: "Marketing Gallery EL AVANTGARDE, Jl. Bintaro Utama (placeholder), Bintaro, Tangerang Selatan, Banten",
+  officeCenter: "Jl. Perkici Raya Blok EB2 No.16 Jurang Mangu Timur, Pondok Aren, Tangerang Selatan 15222",
+  branchOffice: "Citra Pesona Tembalang, B12, Jabungan Kec. Banyumanik, Kota Semarang Jawa Tengah 50266",
   mapEmbed: "https://www.google.com/maps?q=Bintaro%2C%20Tangerang%20Selatan&z=13&output=embed",
 };
 
