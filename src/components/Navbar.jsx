@@ -51,15 +51,20 @@ export const Navbar = () => {
         <Link to="/" data-testid="nav-logo" className="flex items-center gap-1 sm:gap-2">
           <img 
             src="/logo.png" 
-            alt="EL AVANTGARDE Logo" 
+            alt="EL AVANTGARDE Icon" 
             className="h-12 sm:h-14 md:h-16 w-auto"
             onError={(e) => {
               e.target.style.display = 'none';
             }}
           />
-          <span className={`min-w-0 truncate font-display text-sm sm:text-xl md:text-2xl tracking-[0.1em] sm:tracking-[0.14em] md:tracking-[0.28em] font-medium whitespace-nowrap ${solid ? "text-[#121212]" : "text-white"}`}>
-            EL AVANTGARDE
-          </span>
+          <img 
+            src="/logo-script.png" 
+            alt="EL AVANTGARDE" 
+            className="h-8 sm:h-10 md:h-12 w-auto"
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
         </Link>
         <nav className="hidden xl:flex items-center gap-7">{LINKS.map((k) => <NavLink key={k} k={k} />)}</nav>
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
