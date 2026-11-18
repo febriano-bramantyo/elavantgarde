@@ -5,7 +5,8 @@ export const PORTFOLIO = [
     id: "mr-at-palu",
     title: "Mr. AT",
     location: "Palu, Sulawesi Tengah",
-    image: "/portfolio/mr-at-palu.jpg",
+    image: "/portfolio/mr-palu/mr-at-palu.jpg",
+    gallery: ["/portfolio/mr-palu/mr-at-palu.jpg"],
     category: { en: "Private Residence", id: "Residensi Pribadi" },
     desc: {
       en: "A grand white neoclassical residence with fluted Corinthian columns, ornate cornices and a sculptural crown chandelier welcoming guests under the porte-cochère.",
@@ -16,7 +17,8 @@ export const PORTFOLIO = [
     id: "hotel-tara",
     title: "Hotel Tara",
     location: "Hospitality Project",
-    image: "/portfolio/hotel-tara.jpg",
+    image: "/portfolio/tara-hotel-yogyakarta/hotel-tara.jpg",
+    gallery: ["/portfolio/tara-hotel-yogyakarta/hotel-tara.jpg"],
     category: { en: "Hospitality Interior", id: "Interior Hospitality" },
     desc: {
       en: "Lobby, guest rooms and restaurant composed with warm walnut coffers, layered cove lighting and polished stone — calm luxury for every guest.",
@@ -27,7 +29,8 @@ export const PORTFOLIO = [
     id: "rumah-adat",
     title: "Rumah Adat",
     location: "Contemporary Vernacular",
-    image: "/portfolio/rumah-adat.jpg",
+    image: "/portfolio/rumah-adat/rumah-adat.jpg",
+    gallery: ["/portfolio/rumah-adat/rumah-adat.jpg"],
     category: { en: "Architecture", id: "Arsitektur" },
     desc: {
       en: "A crisp black gable roof over pure white walls, framed by a stone garden wall and terracotta breeze blocks — heritage reinterpreted for modern living.",
@@ -38,7 +41,8 @@ export const PORTFOLIO = [
     id: "interior-kitchen",
     title: "Interior Design",
     location: "Kitchen & Living",
-    image: "/portfolio/interior-kitchen.jpg",
+    image: "/portfolio/interior-kitchen/interior-kitchen.jpg",
+    gallery: ["/portfolio/interior-kitchen/interior-kitchen.jpg"],
     category: { en: "Residential Interior", id: "Interior Residensial" },
     desc: {
       en: "A waterfall marble island beneath woven rattan pendants, dark timber cabinetry and textured concrete walls — an open plan made for gathering.",
@@ -50,6 +54,12 @@ export const PORTFOLIO = [
     title: "Hotel Ars",
     location: "Yogyakarta",
     image: "/portfolio/ars-hotel-yogyakarta/ars-hotel-image-1.jpeg",
+    gallery: [
+      "/portfolio/ars-hotel-yogyakarta/ars-hotel-image-1.jpeg",
+      "/portfolio/ars-hotel-yogyakarta/ars-hotel-image-2.jpeg",
+      "/portfolio/ars-hotel-yogyakarta/ars-hotel-image-3.jpeg",
+      "/portfolio/ars-hotel-yogyakarta/ars-hotel-image-4.jpeg",
+    ],
     category: { en: "Hospitality Architecture", id: "Arsitektur Hospitality" },
     desc: {
       en: "A modern tropical architecture blending contemporary design with natural ventilation, lush greenery and warm Indonesian materials.",

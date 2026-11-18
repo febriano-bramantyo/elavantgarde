@@ -44,13 +44,16 @@ const USP = () => {
   );
 };
 
-const PortfolioItem = ({ p, i, onOpen }) => {
+const PortfolioItem = ({ p, i }) => {
   const { t, tr } = useLang();
   const flip = i % 2 === 1;
+  const galleryItems = (p.gallery || [p.image]).map(src => ({ src }));
+  const lb = useLightbox(galleryItems);
+  
   return (
     <article data-testid={`portfolio-item-${p.id}`} className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
       <Reveal className={`lg:col-span-7 ${flip ? "lg:order-2" : ""}`}>
-        <button data-testid={`portfolio-open-${p.id}`} onClick={onOpen} className="group block w-full rounded-[2rem] overflow-hidden img-zoom relative">
+        <button data-testid={`portfolio-open-${p.id}`} onClick={() => lb.open(0)} className="group block w-full rounded-[2rem] overflow-hidden img-zoom relative">
           <img src={p.image} alt={p.title} className="w-full aspect-[4/3] object-cover" />
           <span className="absolute top-5 right-5 w-12 h-12 rounded-full bg-white/90 text-[#121212] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"><ArrowUpRight size={18} /></span>
         </button>
@@ -61,23 +64,21 @@ const PortfolioItem = ({ p, i, onOpen }) => {
         <h3 className="font-display text-4xl md:text-5xl font-light mt-3">{p.title}</h3>
         <p className="text-sm tracking-[0.12em] uppercase text-neutral-500 mt-2">{p.location}</p>
         <p className="mt-6 text-neutral-600 leading-relaxed">{tr(p.desc)}</p>
-        <button onClick={onOpen} data-testid={`portfolio-view-${p.id}`} className="mt-8 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase font-semibold border-b border-[#C5A059] pb-1 hover:text-[#B38F46] transition-colors">{t("interior.view")}<ArrowUpRight size={14} /></button>
+        <button onClick={() => lb.open(0)} data-testid={`portfolio-view-${p.id}`} className="mt-8 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase font-semibold border-b border-[#C5A059] pb-1 hover:text-[#B38F46] transition-colors">{t("interior.view")}<ArrowUpRight size={14} /></button>
       </Reveal>
+      <Lightbox items={galleryItems} index={lb.index} onClose={lb.close} onNav={lb.nav} />
     </article>
   );
 };
 
 const Portfolio = () => {
   const { t } = useLang();
-  const items = PORTFOLIO.map((p) => ({ src: p.image }));
-  const lb = useLightbox(items);
   return (
     <section data-testid="portfolio-section" className="py-24 md:py-36 bg-[#F4EFEA]">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
         <SectionHeading eyebrow={t("interior.portfolio")} title={t("interior.portfolioTitle")} />
-        <div className="mt-20 space-y-24 md:space-y-36">{PORTFOLIO.map((p, i) => <PortfolioItem key={p.id} p={p} i={i} onOpen={() => lb.open(i)} />)}</div>
+        <div className="mt-20 space-y-24 md:space-y-36">{PORTFOLIO.map((p, i) => <PortfolioItem key={p.id} p={p} i={i} />)}</div>
       </div>
-      <Lightbox items={items} index={lb.index} onClose={lb.close} onNav={lb.nav} />
     </section>
   );
 };
