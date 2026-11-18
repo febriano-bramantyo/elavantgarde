@@ -45,6 +45,17 @@ export const PORTFOLIO = [
       id: "Island marmer waterfall di bawah lampu rotan anyaman, kabinet kayu gelap, dan dinding beton bertekstur — ruang terbuka untuk berkumpul.",
     },
   },
+  {
+    id: "hotel-ars-yogyakarta",
+    title: "Hotel Ars",
+    location: "Yogyakarta",
+    image: "/portfolio/ars-hotel-yogyakarta/ars-hotel-image-1.jpeg",
+    category: { en: "Hospitality Architecture", id: "Arsitektur Hospitality" },
+    desc: {
+      en: "A modern tropical architecture blending contemporary design with natural ventilation, lush greenery and warm Indonesian materials.",
+      id: "Arsitektur modern tropis yang memadukan desain kontemporer dengan ventilasi alami, kehijauan rimbun, dan material Indonesia yang hangat.",
+    },
+  },
 ];
 
 export const SIGNATURE = [
