@@ -18,7 +18,13 @@ export const PORTFOLIO = [
     title: "Hotel Tara",
     location: "Hospitality Project",
     image: "/portfolio/tara-hotel-yogyakarta/hotel-tara.jpg",
-    gallery: ["/portfolio/tara-hotel-yogyakarta/hotel-tara.jpg"],
+    gallery: [
+      "/portfolio/tara-hotel-yogyakarta/hotel-tara.jpg",
+      "/portfolio/tara-hotel-yogyakarta/tara-hotel-image-1.jpeg",
+      "/portfolio/tara-hotel-yogyakarta/tara-hotel-image-2.jpeg",
+      "/portfolio/tara-hotel-yogyakarta/tara-hotel-image-3.jpeg",
+      "/portfolio/tara-hotel-yogyakarta/tara-hotel-image-4.jpeg",
+    ],
     category: { en: "Hospitality Interior", id: "Interior Hospitality" },
     desc: {
       en: "Lobby, guest rooms and restaurant composed with warm walnut coffers, layered cove lighting and polished stone — calm luxury for every guest.",
